@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <h1 id="title"> Chọn màu từ ảnh</h1>
+
+    <input type="file" id="upload" accept="image/*" />
+
+    <div class="canvas-wrapper">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <p>
+      <span id="colorLabel">Mã màu:</span>
+      <span id="colorCode">#______</span>
+    </p>
+
+    <div id="colorHistoryContainer">
+      <span id="historyLabel">Bảng màu gần đây:</span>
+      <div id="colorHistory"></div>
+    </div>
+
+    <button id="langToggle">EN</button>
+
+    <div id="founder">Founder: aduanhvi</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

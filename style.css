@@ -1,0 +1,140 @@
+/* reset cơ bản */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+
+/* gradient động nền */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #f2994a, #f2c94c);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* container chính scroll được nếu cần */
+.app-container {
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* tiêu đề */
+h1 {
+  margin-bottom: 16px;
+  font-size: 1.8em;
+}
+
+/* input upload */
+#upload {
+  margin-bottom: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* wrapper canvas */
+.canvas-wrapper {
+  max-height: 40vh;
+  overflow: auto;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.2);
+}
+
+/* canvas full width */
+canvas {
+  display: block;
+  width: 100%;
+}
+
+/* hiển thị mã màu */
+p {
+  margin-top: 16px;
+  font-size: 1.1em;
+}
+#colorCode {
+  margin-left: 8px;
+  font-weight: bold;
+  background: #fff;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* bảng màu gần đây */
+#colorHistoryContainer {
+  margin-top: 20px;
+}
+#historyLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+#colorHistory {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.color-box {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.color-box:hover {
+  transform: scale(1.1);
+}
+
+/* nút toggle ngôn ngữ */
+button#langToggle {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.3);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button#langToggle:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+/* dòng founder */
+#founder {
+  margin-top: 16px;
+  font-size: 0.9em;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+#founder:hover {
+  opacity: 1;
+}
